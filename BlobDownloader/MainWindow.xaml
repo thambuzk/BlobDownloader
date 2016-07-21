@@ -1,0 +1,31 @@
+﻿<Window x:Class="BlobDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlobDownloader"
+        mc:Ignorable="d"
+        Title="Blob Downloader" Height="300" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".2*" />
+            <ColumnDefinition Width=".8*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".20*" />
+            <RowDefinition Height=".20*" />
+            <RowDefinition Height=".20*" />
+            <RowDefinition Height=".25*" />
+            <RowDefinition Height=".15*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0"  Content="Storage Account Name" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="txtAccountName"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="600" />
+        <Label Grid.Column="0" Grid.Row="1"  Content="Storage Account Key" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtAccountKey" HorizontalAlignment="Left" VerticalAlignment="Center" Width="600" />
+        <Label Grid.Column="0" Grid.Row="2"  Content="Local Folder Name" HorizontalAlignment="Right"  VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="2" x:Name="txtFolderName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="600" />
+        <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Download to local" Click="Button_Click"/>
+        <TextBlock Name="lblStatusbarText" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
